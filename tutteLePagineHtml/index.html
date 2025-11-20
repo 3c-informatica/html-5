@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="it"><!--questo serve per dire al browser che versione di html andremo a utilizzare-->
     <head>
+        <!--serve per i meta dati cioe i dati che andremo a dare al browser-->
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Titolo della pagina</title>
+        <meta name="description" content="Breve descrizione della pagina" ><!--nei metadati possiamo anche mettere una descriozione della pagina nei meta dati-->
+        <meta name="author" content="bruzzone alessandro"><!--questo serve invece per dire chi e l'autore della pagina-->
+        <link rel="stylesheet" href="qualcosa.css"><!--serve a mettere un vollegamento  alla pagina web che stai costruendo con la pagina al interno del attributo href-->
+        <link rel="icon" href="images/icona.ico"><!--questo serve per dirgli che noi useremo un icona poi mettiamo il path del icon al interno del href-->
     </head>
     <body>
-        
+        <header align="center"><!-- inserendo l'heder serve per dare la struttura alla pagina ma visivamente non cambia nulla-->        
+            <!--questo tag serve per dare l'intstazione della pagina web l'head serve invece per i metadati-->
+            <h1>bella bruzzone</h1>
+            <p>ciaoooooo come state ammiciiiiiii non posso ne scendere ne salire</p>
+            <nav> </nav> <!--definisce dei link che serviranno alla navigazione-->
+        </header> 
+
+        <main class="main">
+            <!--qui dentro ci andro a mettere il contenuto principale-->
+            <sectionclas sections="prima-sezione">
+                <p>questa e una fantomatica sezione</p>
+                <!--dato che main era troppo generico hanno introdotto le section e serve per dividere ulteriormente la pagina-->
+                <article class="article">
+                    <!--e una sezione indipendente -->
+                    <p>contenuto dellapagina principale bella ragazzi belli ciaoooooooooooo</p>
+                </article>
+            </section>
+
+            <aside class="aside" aling="right">
+                <!--serve per banner publicitari e anche per menu laterali, contenuti differenti dal contesto della pagina-->
+                <ul>
+                    <li>elemento 1</li>
+                    <li>elemento 2</li>
+                    <li>elemento 3</li>
+                </ul>
+            </aside>
+        </main>
+
+        <footer>
+            <!--questo e il pie della pagina solitamente ci stanno le informazioni legali e i contatti-->
+            <p>questo e il pie della pagina</p>
+            <address>  
+                contatti: 338 964 5762 <br>
+                email:admin.example@gmail.com <br>
+                via:via roma 123 <br>
+                citta: 12048 Torino TO <br>
+            </address>
+        </footer>
+
     </body>
 </html>
