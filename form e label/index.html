@@ -1,0 +1,49 @@
+<!DOCTYPE html><!--indica al browser che il documento e in html, non proprio tag piu informazione che diamo al browser sul tipo di documento che si aspetta-->
+<html lang="it"><!--tag html che definisce inizio e fine del documento, rappresenta la radice del nostro documento, aggiungo "lang" dichiaro la lingua della pagina web, serve al browser ma anche al motore di ricerca-->
+    <head><!--elememnto contenitore, ma che serve per i metadati-->
+        <meta charset="UTF-8">
+        <title>Titolo della pagina</title>
+        <meta name="description" content="Breve descrizione della pagina"> <!--un contenuto descrittivo oltre al tittolo della pagina, il meta nella description avrà un suo attributo-->
+        <meta name="author" content="classe 3C INFO VALLAURI">
+        <link rel="stylesheet" href="foglio-stile.css"> <!--link metadati nascosti che ci servono con l'attributo rel indichiamo qua'è l'obbiettivo da raggiungere con questo link; collegamento della pagina con link che dici nel "rel"(tipologia di collegamento)-->
+        <link rel="icon" href="images/favicon.ico"><!--imposta l'icona che compare nelle schede--><!--link definisce relazione tra la nostra pagina e una pagina esterna--><!--attributi per tag link: "rel"; "href" specifica percorso del nostro file-->
+    </head>
+    <!--TITOLO LEZIONE 20/11/25-->
+    <!--TAG PER ORDINARE MEGLIO LA PAGINA-->
+    <body>
+        <header><!--intestazione della nostra pagina web(visibile), header!=head--><!--aggiungendo header costruisco la pagina secondo il modello html--><!--tutto quello che c'è dentro header lo tratto come contenitore del titolo, intestazione-->
+            <h1>Titolo della pagina</h1><!--titolo visibile all'interno della pagina web-->
+            <p>paragrafo</p>
+            <nav>Menu links</nav><!--definisce un insieme di link dedicati alla navigazione, come ad esempio un menu, facilita la modifica di cose-->
+        </header>
+        <main><!--il contenuto principale, -->
+            <section><!--creo una sezione all'interno della quale  -->
+                
+                <article><!--rappresenta un contenuto indipendente, come se fosse uno o una serie di paragrafi, nasce come concetto di contenuto indipendente-->
+                    <p>Contenuto principale del documento</p>
+                    <form action="paginainvio.php" method="get"> <!--rappresentazione attraverso un modulo per far inserire qualcosa all'utente; racchiude tutti i tag che mi permettono di creare oggetti per l'inserimento; IL TAG PER CREARE IL MODULO è QUESTO--><!--ACTION mi dice dove mandare i dati dopo che l'utente ha premuto invio--><!--METHOD, metodologia usata per passare i dati: 1. get= i dati vengono agganciati a quello che è la nostra pagina di destinazione 2.post=[è di più per l'invio di informazioni ma al momento non c'è nessuno a recepirle] passato direttamente al server tramite le intestazioni della pagina web, dati nascosti all'uetnte(forse, ho capito che vengono nascosti ma non ho capito a chi)-->
+                        <label for="nome"><!--nessuno ci vieta di inserire l'input dentro la label, per motivi di ordine prima label poi l'input; eticheta utilizzata per determinatp oggetto di imput; etichetta sta per il nome-->
+                            nome
+                        </label><!-- -->
+                        <input id="nome" type="text">
+                        <label for="cognome">cognome</label>
+                        <input id="cognome" type="text">
+                        <input type="submit"><!--mi crea pulsante per l'invio-->
+                        <button></button><!--si puo inserire un button che faccia qualcpsa, è PERSONALIZZABILE o inserire submut-->
+                    </form>
+                </article>
+                
+            </section>
+            <aside><!--contenuto speciale, oltre al contenuto classico; puo essere una barra laterale,...; qualcosa di diverso dallo stile classico della pagina; puo essere sia dentro che fuori dalla section; NON CE UNA POSIZIONE FISSA, IMPORTANTE CHE SIA NEL MAIN-->
+                Contenuto non standard, differente dalle impostazioni nelle section
+            </aside>
+            
+        </main>
+        <footer><!--pie di pagina del nostro documento; ci sono: contatti, link esterni, address, logo, ....-->
+            pie di pagina del nostro documento
+            <address></address>
+        </footer>
+
+    </body>
+</html>
+    
