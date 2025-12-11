@@ -5,7 +5,7 @@
         <title>Titolo della pagina</title>
         <meta name="description" content="Breve descrizione della pagina"> <!--un contenuto descrittivo oltre al tittolo della pagina, il meta nella description avrà un suo attributo-->
         <meta name="author" content="classe 3C INFO VALLAURI">
-        <link rel="stylesheet" href="foglio-stile.css"> <!--link metadati nascosti che ci servono con l'attributo rel indichiamo qua'è l'obbiettivo da raggiungere con questo link; collegamento della pagina con link che dici nel "rel"(tipologia di collegamento)-->
+        <link rel="stylesheet" href="/form e label/foglio-stile.css"> <!--link metadati nascosti che ci servono con l'attributo rel indichiamo qua'è l'obbiettivo da raggiungere con questo link; collegamento della pagina con link che dici nel "rel"(tipologia di collegamento)-->
         <link rel="icon" href="images/favicon.ico"><!--imposta l'icona che compare nelle schede--><!--link definisce relazione tra la nostra pagina e una pagina esterna--><!--attributi per tag link: "rel"; "href" specifica percorso del nostro file-->
     </head>
     <!--TITOLO LEZIONE 20/11/25-->
@@ -20,23 +20,29 @@
             <section><!--creo una sezione all'interno della quale  -->
                 <article><!--rappresenta un contenuto indipendente, come se fosse uno o una serie di paragrafi, nasce come concetto di contenuto indipendente-->
                     <p>Contenuto principale del documento</p>
-                    <form action="paginainvio.php" method="get"> <!--rappresentazione attraverso un modulo per far inserire qualcosa all'utente; racchiude tutti i tag che mi permettono di creare oggetti per l'inserimento; IL TAG PER CREARE IL MODULO è QUESTO--><!--ACTION mi dice dove mandare i dati dopo che l'utente ha premuto invio--><!--METHOD, metodologia usata per passare i dati: 1. get= i dati vengono agganciati a quello che è la nostra pagina di destinazione 2.post=[è di più per l'invio di informazioni ma al momento non c'è nessuno a recepirle] passato direttamente al server tramite le intestazioni della pagina web, dati nascosti all'uetnte(forse, ho capito che vengono nascosti ma non ho capito a chi)-->
-                        <label for="nome">nome</label><!--nessuno ci vieta di inserire l'input dentro la label, per motivi di ordine prima label poi l'input; eticheta utilizzata per determinatp oggetto di imput; etichetta sta per il nome-->
-                        <input id="nome" type="text">
-                        <label for="cognome">cognome</label>
-                        <input id="cognome" type="text">
+
+
+                    <form action="../form e label/paginainvio.php" method="get"> <!--rappresentazione attraverso un modulo per far inserire qualcosa all'utente; racchiude tutti i tag che mi permettono di creare oggetti per l'inserimento; IL TAG PER CREARE IL MODULO è QUESTO--><!--ACTION mi dice dove mandare i dati dopo che l'utente ha premuto invio--><!--METHOD, metodologia usata per passare i dati: 1. get= i dati vengono agganciati a quello che è la nostra pagina di destinazione 2.post=[è di più per l'invio di informazioni ma al momento non c'è nessuno a recepirle] passato direttamente al server tramite le intestazioni della pagina web, dati nascosti all'uetnte(forse, ho capito che vengono nascosti ma non ho capito a chi)-->
+                        <fieldset class="nome_cognome">
+                            <label for="nome">nome</label><!--nessuno ci vieta di inserire l'input dentro la label, per motivi di ordine prima label poi l'input; eticheta utilizzata per determinatp oggetto di imput; etichetta sta per il nome-->
+                            <input id="nome" type="text">
+                            <label for="cognome">cognome</label>
+                            <input id="cognome" type="text">
+                        </fieldset>
+                        <fieldset class="mail_notifche">
+                            <input type="checkbox" name="notifica" id="notifica" checked> <!--per farla partire gia impostata appena carico la pagina metto l'attributo cheked--><!--una zona in qui posso andare a inserire una chekbox-->
+                            <label for="notifica">ricevi notifiche</label><!--leggera una variabile per notifica-->
+                            <br>
+                            <label for="natale">inserisci il giorno di natale</label>
+                            <input type="date" min="2025-01-01" max="2025-12-31" value="2025-12-02" id="natale"> <!--serve per inserire una data e gli atributi min e max per mettere dei limiti alle date che possiamo inserire-->
+                            <!--<input type="datetime" > non cambia nulla ma include la data-->
+                            <br>
+                            <!--questo e gia incluso in html 5 per fare la validazione automatica-->
+                            <label for="email">inserisci la tua mail: </label>
+                            <input type="email" id="email" placeholder="inserisci la tua mail"> <!--l'attributo placeholder serve per inserisce del testo al interno della box di input-->
+                        </fieldset>
                         <input id="pulsante1" type="button" value="clicca qui"> <!--e un pulsante generico meglio utilizzare il tag button vero e proprio perche crea meno confusione nei file css ai bottoni possiamo anche inserire dei value che serve per inserire il testo al interno del pulsante-->
                         <input type="submit"> <br><!--effettivo pulsante di invia e inserisce il pulsante invia di suo questo quando premo invia mandera i dati invece con il type button dovremmo implementare con javascript-->
-                        <input type="checkbox" name="notifica" id="notifica" checked> <!--per farla partire gia impostata appena carico la pagina metto l'attributo cheked--><!--una zona in qui posso andare a inserire una chekbox-->
-                        <label for="notifica">ricevi notifiche</label><!--leggera una variabile per notifica-->
-                        <br>
-                        <label for="natale">inserisci il giorno di natale</label>
-                        <input type="date" min="2025-01-01" max="2025-12-31" value="2025-12-02" id="natale"> <!--serve per inserire una data e gli atributi min e max per mettere dei limiti alle date che possiamo inserire-->
-                        <!--<input type="datetime" > non cambia nulla ma include la data-->
-                        <br>
-                        <!--questo e gia incluso in html 5 per fare la validazione automatica-->
-                        <label for="email">inserisci la tua mail: </label>
-                        <input type="email" id="email" placeholder="inserisci la tua mail"> <!--l'attributo placeholder serve per inserisce del testo al interno della box di input-->
                         <br>
                         <input type="file" accept=".jpg, .png, .pdf"><br><!--con l'attributo accept posiamo limitare i file che l'utente può inerire--><!--permette di allegare uno o più file al interno della pagina html-->
                         <input type="hidden" value="123"><!--serve per non far vedere che sto facendo passare dei dati--><!--vanno usati con molta parsimonia--><!--si utiliza quando vogliamo andare a passare un valore nascosto che l'utente non deve vedere-->
@@ -48,17 +54,16 @@
                         <br>
                         <label for="password">inserisci una password: </label>
                         <input type="password" id="password" placeholder="inserisci una password" required> <br><!--required e una ttributo che rende quel campo obbligatorio--><!--serve per far inserire una password-->
-                        <label for="risposta1">sabato</label>
-                        <input type="radio" name="risposta"  id="risposta1" value="6" ><br><!--serve per creare dei pulsanti a scelta singola per funzionare ddevo dare a piu radio un name-->
-                        <label for="risposta2">domenica</label>
-                        <input type="radio" name="risposta" id="risposta2" value="7"><!--per mandare qualcosa alla pagina dobbiamo mettere anche un value-->
+                        <fieldset class="scelta_giorno">
+                            <label for="risposta1">sabato</label>
+                            <input type="radio" name="risposta"  id="risposta1" value="6" ><!--serve per creare dei pulsanti a scelta singola per funzionare ddevo dare a piu radio un name-->
+                            <label for="risposta2">domenica</label>
+                            <input type="radio" name="risposta" id="risposta2" value="7"><!--per mandare qualcosa alla pagina dobbiamo mettere anche un value-->
+                        </fieldset>
                         <br>
                         <label for="ricerca">cerca qualcosa</label>
                         <input type="search" id="ricerca" placeholder="cerca qui"> <!--questo tag serve avere un campo per la ricerca-->
-                        <input type="range">    
-                    
-                    
-                    
+                        <input type="range" min="0" max="50">    
                     </form>
                 </article>                
             </section>

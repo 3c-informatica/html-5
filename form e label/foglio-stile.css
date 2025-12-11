@@ -1,0 +1,172 @@
+/* Stili per il fieldset con classe "nome_cognome" e le sue text box arrotondate */
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+fieldset.nome_cognome {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    background: #fafafa;
+}
+
+/* Text box: input text/email/tel e textarea */
+fieldset.nome_cognome input[type="text"],
+fieldset.nome_cognome input[type="email"],
+fieldset.nome_cognome input[type="tel"],
+fieldset.nome_cognome textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px; /* arrotondamento delle text box */
+    background: #ffffff;
+    font: inherit;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* Focus più evidente senza outline nativo */
+fieldset.nome_cognome input[type="text"]:focus,
+fieldset.nome_cognome input[type="email"]:focus,
+fieldset.nome_cognome input[type="tel"]:focus,
+fieldset.nome_cognome textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 4px rgba(74,144,226,0.12);
+}
+
+/* Placeholder meno invadente */
+fieldset.nome_cognome ::placeholder {
+    color: #9b9b9b;
+}
+
+/* Opzionale: layout a righe per label+input */
+/* Layout a righe per label+input (anche per mail_notifiche) */
+fieldset.nome_cognome .field-row,
+fieldset.mail_notifiche .field-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* Stili per il fieldset mail_notifiche (simili a nome_cognome) */
+fieldset.mail_notifche {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    background: #fafafa;
+}
+
+/* Text box dentro mail_notifiche */
+fieldset.mail_notifche input[type="text"],
+fieldset.mail_notifche input[type="email"],
+fieldset.mail_notifche input[type="tel"],
+fieldset.mail_notifche textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    background: #ffffff;
+    font: inherit;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* Focus per mail_notifiche */
+fieldset.mail_notifche input[type="text"]:focus,
+fieldset.mail_notifche input[type="email"]:focus,
+fieldset.mail_notifche input[type="tel"]:focus,
+fieldset.mail_notifche textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 4px rgba(74,144,226,0.12);
+}
+
+/* Placeholder meno invadente anche per mail_notifiche */
+fieldset.mail_notifche ::placeholder {
+    color: #9b9b9b;
+}
+
+/* Stili per il fieldset con classe "scelta_giorno" e le sue text box arrotondate */
+fieldset.scelta_giorno {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    background: #fafafa;
+}
+
+/* Layout a righe per label+input all'interno di scelta_giorno */
+fieldset.scelta_giorno .field-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Text box / select / date / textarea dentro scelta_giorno */
+fieldset.scelta_giorno input[type="text"],
+fieldset.scelta_giorno input[type="email"],
+fieldset.scelta_giorno input[type="tel"],
+fieldset.scelta_giorno input[type="date"],
+fieldset.scelta_giorno select,
+fieldset.scelta_giorno textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    background: #ffffff;
+    font: inherit;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+/* Focus più evidente senza outline nativo */
+fieldset.scelta_giorno input[type="text"]:focus,
+fieldset.scelta_giorno input[type="email"]:focus,
+fieldset.scelta_giorno input[type="tel"]:focus,
+fieldset.scelta_giorno input[type="date"]:focus,
+fieldset.scelta_giorno select:focus,
+fieldset.scelta_giorno textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 4px rgba(74,144,226,0.12);
+}
+
+/* Placeholder meno invadente */
+fieldset.scelta_giorno ::placeholder {
+    color: #9b9b9b;
+}
+
+/* Stile leggero per opzioni di scelta (es. radio/checkbox per i giorni) */
+fieldset.scelta_giorno .option {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .25rem .5rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+    transition: background .12s ease, border-color .12s ease;
+}
+
+fieldset.scelta_giorno input[type="radio"],
+fieldset.scelta_giorno input[type="checkbox"] {
+    accent-color: #4a90e2;
+}
+
+fieldset.scelta_giorno .option:hover {
+    background: rgba(74,144,226,0.04);
+}
+
+/* Se l'input è affiancato a una label/span, evidenzia il testo quando selezionato */
+fieldset.scelta_giorno .option input:checked + span,
+fieldset.scelta_giorno .option input:checked ~ span {
+    font-weight: 600;
+}
